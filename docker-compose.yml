@@ -1,0 +1,18 @@
+web:
+    build: .
+    working_dir: /data
+    command: python app.py
+    links:
+      - db
+    volumes:
+      - .:/data
+    ports:
+      - "5000:5000"
+  
+db:
+    image: postgres:9.3
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust      
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"

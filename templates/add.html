@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/imagens/lista-de-controle.png"/>
+    <title>Cadastro de aluno</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Cadastrar aluno</h1>
+    <div class="containerFormAdicionar">
+        <table border="1" class="table table-striped table-borderless">
+            <form action="/add" method="POST">
+                <tr>
+                    <td>Digite seu R.A:</td>
+                    <td><input type="text" name="ra" id="ra" size="50"/></td>
+                </tr>
+                <tr>
+                    <td>Digite seu Nome:</td>
+                    <td><input type="text" name="nome" id="nome" size="80" /></td>
+                </tr>
+                <tr>
+                    <td>Digite seu email:</td>
+                    <td><input type="text" name="email" id="email" size="80" /></td>
+                </tr>
+                <tr>
+                    <td>Digite seu logradouro:</td>
+                    <td><input type="text" name="logradouro" id="logradouro" size="80" /></td>
+                </tr>
+                <tr>
+                    <td>Digite o número:</td>
+                    <td><input type="text" name="numero" id="numero" size="10" /></td>
+                </tr>
+                <tr>
+                    <td>Digite o seu CEP:</td>
+                    <td><input type="text" name="cep" id="cep" size="20" /></td>
+                </tr>
+                <tr>
+                    <td>Digite o seu complemento:</td>
+                    <td><input type="text" name="complemento" id="complemento" size="10" /></td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <div class="botaoFormAdicionar">
+                            <button type="submit" class="btn btn-success">Enviar</button>
+                            <a href="/" class="btn btn-secondary">Voltar</a>
+                        </div>
+                        
+                        
+                    </th>
+                </tr>
+            </form>
+    
+        </table>
+    </div>
+
+</body>
+</html>

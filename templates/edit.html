@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/imagens/lista-de-controle.png"/>
+    <title>Cadastro de Aluno</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Editar Aluno {{aluno.ra}}</h1>
+    <div class="containerFormEditar">
+        <table border="1" class="table table-striped table-borderless">
+            <form action="/edit/{{aluno.idAluno}}" method="POST">
+                <tr>
+                    <td>Digite seu nome:</td>
+                    <td><input type="text" name="nome" value="{{aluno.nome}}" /></td>
+                </tr>
+                <tr>
+                    <td>Digite seu email:</td>
+                    <td><input type="text" name="email" value="{{aluno.email}}" /></td>
+                </tr>
+                <tr>
+                    <td>Digite seu logradouro:</td>
+                    <td><input type="text" name="logradouro" value="{{aluno.logradouro}}" /></td>
+                </tr>
+                <tr>
+                    <td>Digite seu numero:</td>
+                    <td><input type="text" name="numero" value="{{aluno.numero}}" /></td>
+                </tr>
+                <tr>
+                    <td>Digite seu CEP:</td>
+                    <td><input type="text" name="cep" value="{{aluno.cep}}" /></td>
+                </tr>
+                <tr>
+                    <td>Digite seu complemento:</td>
+                    <td><input type="text" name="complemento" value="{{aluno.complemento}}" /></td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <div class="botaoEditar">
+                            <button type="submit" class="btn btn-success">Enviar</button>
+                            <a href="/" class="btn btn-secondary">Voltar</a>
+                        </div>
+                    </th>
+                </tr>
+            </form>
+        </table>
+    </div>
+
+
+</body>
+</html>
