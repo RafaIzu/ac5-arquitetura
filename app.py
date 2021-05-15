@@ -3,10 +3,10 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from check_connection import CheckConnection
 
-db_connection =  "postgresql+psycopg2://postgres:postgres@db:5432/ac5" # teste container
+db_connection =  "postgresql://postgres:postgres@172.17.0.2:5432/postgres" # teste container
 print(db_connection)
 # db_connection = "postgresql://postgres:toalha28@localhost:5432/ac5" # teste local
-sql_connection = db_connection.replace("/ac5","")
+sql_connection = db_connection.replace("/postgres","")
 
 conn_check = CheckConnection(connection_test= db_connection, sql_connection=sql_connection)
 conn_check.check_connection()
