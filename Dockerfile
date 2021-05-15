@@ -1,6 +1,6 @@
   
 FROM python:3.8.1
-RUN pip install psycopg2
+RUN pip install psycopg2-binary
 RUN pip install SQLAlchemy
 RUN pip install flask
 RUN pip install greenlet
